@@ -18,30 +18,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#fdf3e2;
-    --blush:#f0cdb9;
-    --blush-deep:#e8a08c;
-    --sage:#f3d9ba;
-    --sage-deep:#cfa45c;
-    --sky:#f6dec3;
-    --sky-deep:#dda184;
-    --sand:#f4dcbb;
-    --terra:#e6b566;
-    --maroon:#6d1b2c;
-    --maroon-deep:#4d1020;
-    --marigold:#f0a03c;
-    --ink:#fdf0dc;
-    --ink-soft:#e0c0a6;
-    --gold:#e0bd6b;
-    --gold-bright:#f2d89f;
-    --page-bg:#4d1020;
+    --cream:#fbf6ec;
+    --blush:#e9e0cc;
+    --blush-deep:#bd8f66;
+    --sage:#cfd8c5;
+    --sage-deep:#7d8f6e;
+    --sky:#d7e5dc;
+    --sky-deep:#8fa99a;
+    --sand:#e8dcc6;
+    --terra:#6f8464;
+    --maroon:#7d8f6e;
+    --maroon-deep:#5e6f52;
+    --marigold:#d9a24a;
+    --ink:#3f4a3a;
+    --ink-soft:#6d7563;
+    --gold:#b39a5e;
+    --gold-bright:#d9c58e;
+    --page-bg:#fbf6ec;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --page-bg:#4d1020;
+      --page-bg:#fbf6ec;
     }
   }
-  :root[data-theme="dark"]{ --page-bg:#4d1020; }
+  :root[data-theme="dark"]{ --page-bg:#fbf6ec; }
 
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{margin:0;padding:0;height:100%;}
@@ -75,9 +75,9 @@
     padding:56px 26px;
     overflow:hidden;
   }
-  .s1{background:linear-gradient(170deg,#7d2135 0%,#4d1020 100%);}
-  .s2{background:linear-gradient(170deg,#5d1728 0%,#7d2135 55%,#4a1120 100%);}
-  .s3{background:linear-gradient(170deg,#5a1a2e 0%,#7d2135 68%,#48101f 100%);}  .s2b{background:linear-gradient(170deg,#4d1020 0%,#6d1b2c 50%,#5a1626 100%);}
+  .s1{background:linear-gradient(170deg,#f7f2e5 0%,#dee6d6 100%);}
+  .s2{background:linear-gradient(170deg,#e3ebdf 0%,#faf6ea 55%,#e9e0cc 100%);}
+  .s3{background:linear-gradient(170deg,#d8e5dd 0%,#faf6eb 68%,#e6dcc6 100%);}  .s2b{background:linear-gradient(170deg,#e9e0cc 0%,#f9f4e8 50%,#dfe7da 100%);}
   .states{
     font-family:"Playfair Display", Georgia, serif;
     font-size:clamp(1.3rem,6vw,1.75rem);line-height:1.34;margin:18px 0 0;color:var(--ink);
@@ -95,8 +95,8 @@
     0%{transform:translateX(-70px);}
     100%{transform:translateX(330px);}
   }
-  .s4{background:linear-gradient(170deg,#4a1120 0%,#6d1b2c 60%,#5d1728 100%);}
-  .s5{background:linear-gradient(170deg,#7d2135 0%,#45101e 100%);}
+  .s4{background:linear-gradient(170deg,#e6dcc6 0%,#faf6eb 60%,#e0e8dc 100%);}
+  .s5{background:linear-gradient(170deg,#dee6d6 0%,#faf6ec 100%);}
 
   .script{font-family:"Great Vibes", cursive;}
 
@@ -104,12 +104,12 @@
   .twinkle{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}
   .twinkle i{
     position:absolute;border-radius:50%;
-    background:var(--gold-bright);box-shadow:0 0 7px var(--gold-bright);
-    opacity:.12;animation:tw 5s ease-in-out infinite;
+    background:var(--gold);box-shadow:0 0 5px rgba(179,154,94,.55);
+    opacity:.1;animation:tw 5s ease-in-out infinite;
   }
   @keyframes tw{
     0%,100%{opacity:.1;transform:scale(.75);}
-    50%{opacity:.75;transform:scale(1.3);}
+    50%{opacity:.6;transform:scale(1.3);}
   }
   .twinkle i:nth-child(1){left:8%;top:17%;width:4px;height:4px;animation-delay:0s;}
   .twinkle i:nth-child(2){left:23%;top:67%;width:5px;height:5px;animation-delay:1.3s;}
@@ -192,7 +192,7 @@
   }
   @supports ((-webkit-background-clip:text) or (background-clip:text)){
     .names{
-      background:linear-gradient(100deg,var(--ink) 34%,var(--gold-bright) 46%,#fff8e8 51%,var(--gold-bright) 56%,var(--ink) 68%);
+      background:linear-gradient(100deg,var(--ink) 34%,#b39a5e 46%,#e2d2a4 51%,#b39a5e 56%,var(--ink) 68%);
       background-size:320% 100%;
       -webkit-background-clip:text;background-clip:text;
       -webkit-text-fill-color:transparent;
@@ -244,10 +244,10 @@
     border:1px solid var(--terra);border-radius:999px;
     color:var(--terra);text-decoration:none;
     font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
-    background:rgba(255,255,255,.07);
+    background:rgba(255,255,255,.55);
     transition:background .25s ease,color .25s ease;
   }
-  .map:hover,.map:focus{background:var(--gold);color:var(--maroon-deep);}
+  .map:hover,.map:focus{background:var(--terra);color:#fff;}
 
   .fill{
     font-family:"Great Vibes",cursive;font-size:1.4rem;
@@ -271,7 +271,7 @@
   .gate.open{pointer-events:none;}
   .gate .panel{
     position:absolute;top:0;bottom:0;width:50.4%;
-    background:linear-gradient(200deg,#7d2135 0%,#3f0c1a 90%);
+    background:linear-gradient(200deg,#93a483 0%,#5b6c4f 92%);
     transition:transform 1.9s cubic-bezier(.62,.02,.2,1);
     overflow:hidden;
   }
@@ -281,11 +281,11 @@
   .gate.open .panel.right{transform:translateX(101%);}
   .gate .panel::after{
     content:"";position:absolute;top:26px;bottom:26px;
-    border:1px solid var(--gold-bright);opacity:.55;
+    border:1px solid #ece0bc;opacity:.7;
   }
   .gate .panel.left::after{left:26px;right:0;border-right:none;}
   .gate .panel.right::after{right:26px;left:0;border-left:none;}
-  .vine{position:absolute;width:112px;opacity:.55;color:var(--gold-bright);}
+  .vine{position:absolute;width:112px;opacity:.6;color:#eee3c2;}
   .vine.a{top:44px;}
   .vine.b{bottom:44px;transform:scaleY(-1);}
   .panel.left .vine{left:40px;}
@@ -299,8 +299,8 @@
   .gate.open .latch{opacity:0;}
   .medallion{
     width:118px;height:118px;border-radius:50%;
-    border:1px solid var(--gold-bright);
-    background:rgba(255,255,255,.07);
+    border:1px solid #ece0bc;
+    background:rgba(255,255,255,.2);
     display:flex;align-items:center;justify-content:center;
     margin:0 auto;
     box-shadow:0 6px 24px rgba(77,68,62,.14);
@@ -308,7 +308,7 @@
   }
   .medallion span{
     font-family:"Playfair Display", Georgia, serif;
-    font-size:1.85rem;color:var(--gold-bright);letter-spacing:.04em;
+    font-size:1.85rem;color:#fbf6e6;letter-spacing:.04em;
   }
   .medallion span i{font-family:"Great Vibes",cursive;font-style:normal;font-size:.95em;}
   @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.045);}}
@@ -317,13 +317,13 @@
     margin-top:20px;font-size:.66rem;letter-spacing:.32em;
     text-transform:uppercase;color:rgba(252,238,212,.8);
   }
-  .tap svg{display:block;margin:10px auto 0;width:34px;color:var(--gold-bright);opacity:.8;}
+  .tap svg{display:block;margin:10px auto 0;width:34px;color:#fbf6e6;opacity:.85;}
 
   /* sound toggle */
   .sound{
     position:fixed;left:14px;bottom:16px;z-index:40;
     width:40px;height:40px;border-radius:50%;
-    border:1px solid var(--gold);background:rgba(255,255,255,.08);
+    border:1px solid var(--terra);background:rgba(255,255,255,.6);
     color:var(--terra);display:none;align-items:center;justify-content:center;
     cursor:pointer;padding:0;opacity:0;transition:opacity .6s ease;
   }
@@ -464,7 +464,7 @@
       <g>
         <circle cx="116" cy="72" r="4.2" fill="#e8807a"/>
         <circle cx="184" cy="72" r="4.2" fill="#e8807a"/>
-        <circle cx="150" cy="76" r="4.6" fill="#f0a03c"/>
+        <circle cx="150" cy="76" r="4.6" fill="#dfa24e"/>
         <circle cx="116" cy="72" r="1.4" fill="#fff3d8"/>
         <circle cx="184" cy="72" r="1.4" fill="#fff3d8"/>
         <circle cx="150" cy="76" r="1.5" fill="#fff3d8"/>
@@ -473,24 +473,24 @@
       <!-- two chubby lovebirds on the string -->
       <g transform="translate(112,48)">
         <path d="M-3 2v6M3 2v6" stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-        <path d="M-8 1l-13-5 4 6-4 5z" fill="#e8a05c"/>
-        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#f0a03c"/>
-        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#d9822f"/>
-        <circle cx="6.5" cy="-10" r="6" fill="#f0a03c"/>
-        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e8c06a"/>
-        <path d="M12-10l6 2.2-6 2.2z" fill="#e05b3a"/>
+        <path d="M-8 1l-13-5 4 6-4 5z" fill="#d7a45e"/>
+        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#dfa24e"/>
+        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#c98a3c"/>
+        <circle cx="6.5" cy="-10" r="6" fill="#dfa24e"/>
+        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e2c274"/>
+        <path d="M12-10l6 2.2-6 2.2z" fill="#c9743f"/>
         <circle cx="8" cy="-11.4" r="1.5" fill="#3a1410"/>
         <circle cx="8.6" cy="-12" r=".5" fill="#fff"/>
         <circle cx="2.5" cy="-7" r="2" fill="#e8807a" opacity=".55"/>
       </g>
       <g transform="translate(188,48) scale(-1,1)">
         <path d="M-3 2v6M3 2v6" stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-        <path d="M-8 1l-13-5 4 6-4 5z" fill="#e8a05c"/>
-        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#f0a03c"/>
-        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#d9822f"/>
-        <circle cx="6.5" cy="-10" r="6" fill="#f0a03c"/>
-        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e8c06a"/>
-        <path d="M12-10l6 2.2-6 2.2z" fill="#e05b3a"/>
+        <path d="M-8 1l-13-5 4 6-4 5z" fill="#d7a45e"/>
+        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#dfa24e"/>
+        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#c98a3c"/>
+        <circle cx="6.5" cy="-10" r="6" fill="#dfa24e"/>
+        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e2c274"/>
+        <path d="M12-10l6 2.2-6 2.2z" fill="#c9743f"/>
         <circle cx="8" cy="-11.4" r="1.5" fill="#3a1410"/>
         <circle cx="8.6" cy="-12" r=".5" fill="#fff"/>
         <circle cx="2.5" cy="-7" r="2" fill="#e8807a" opacity=".55"/>
@@ -500,7 +500,7 @@
       <path d="M150 34c-4-4-9-1.6-9 3 0 4 5.5 7.2 9 10 3.5-2.8 9-6 9-10 0-4.6-5-7-9-3z"
             fill="#e8807a" opacity=".95"/>
       <path d="M150 20c-2.4-2.4-5.4-1-5.4 1.8 0 2.4 3.3 4.3 5.4 6 2.1-1.7 5.4-3.6 5.4-6 0-2.8-3-4.2-5.4-1.8z"
-            fill="#e8a05c" opacity=".7"/>
+            fill="#d7a45e" opacity=".7"/>
 
       <!-- lamp -->
       <g stroke="var(--terra)" stroke-width="1.6" fill="none">
@@ -514,12 +514,12 @@
 
       <!-- small flowers at the base -->
       <g>
-        <circle cx="116" cy="198" r="3.4" fill="#f0a03c" opacity=".85"/>
+        <circle cx="116" cy="198" r="3.4" fill="#dfa24e" opacity=".85"/>
         <circle cx="106" cy="203" r="2.6" fill="#e8807a" opacity=".8"/>
-        <circle cx="184" cy="198" r="3.4" fill="#f0a03c" opacity=".85"/>
+        <circle cx="184" cy="198" r="3.4" fill="#dfa24e" opacity=".85"/>
         <circle cx="194" cy="203" r="2.6" fill="#e8807a" opacity=".8"/>
-        <circle cx="126" cy="205" r="2" fill="#e8c06a" opacity=".75"/>
-        <circle cx="174" cy="205" r="2" fill="#e8c06a" opacity=".75"/>
+        <circle cx="126" cy="205" r="2" fill="#e2c274" opacity=".75"/>
+        <circle cx="174" cy="205" r="2" fill="#e2c274" opacity=".75"/>
       </g>
 
       <!-- sparkles -->
@@ -563,7 +563,7 @@
             d="M22 252C22 126 84 56 160 56s138 70 138 196"/>
       <path class="stroke" stroke="#e6b566" stroke-width="1" fill="none" opacity=".5"
             d="M34 252C34 134 92 68 160 68s126 66 126 184"/>
-      <g fill="#f0a03c" opacity=".9">
+      <g fill="#dfa24e" opacity=".9">
         <circle cx="160" cy="56" r="5"/><circle cx="124" cy="62" r="3.6"/><circle cx="196" cy="62" r="3.6"/>
         <circle cx="92" cy="84" r="3.2"/><circle cx="228" cy="84" r="3.2"/>
         <circle cx="60" cy="124" r="2.8"/><circle cx="260" cy="124" r="2.8"/>
@@ -625,7 +625,7 @@
         <path d="M106.5 99q5.5 3.4 11 0" stroke="#a05a44" stroke-width="1.8" fill="none" stroke-linecap="round"/>
         <ellipse cx="95" cy="88" rx="5" ry="3" fill="#c07a4e" opacity=".28"/>
         <ellipse cx="129" cy="88" rx="5" ry="3" fill="#c07a4e" opacity=".28"/>
-        <path d="M95 118c4 36 30 36 34 0" stroke="#f0a03c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M95 118c4 36 30 36 34 0" stroke="#dfa24e" stroke-width="6" fill="none" stroke-linecap="round"/>
         <g fill="#fff8e6">
           <circle cx="97" cy="132" r="2.2"/><circle cx="102" cy="146" r="2.2"/><circle cx="111" cy="153" r="2.2"/>
           <circle cx="120" cy="152" r="2.2"/><circle cx="126" cy="143" r="2.2"/><circle cx="128" cy="130" r="2.2"/>
@@ -706,7 +706,7 @@
         <circle cx="231" cy="99" r="2.6" fill="#e0bd6b"/>
 
         <!-- garland -->
-        <path d="M193 119c4 34 26 34 30 0" stroke="#f0a03c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M193 119c4 34 26 34 30 0" stroke="#dfa24e" stroke-width="6" fill="none" stroke-linecap="round"/>
         <g fill="#fff8e6">
           <circle cx="195" cy="132" r="2.1"/><circle cx="200" cy="145" r="2.1"/><circle cx="208" cy="151" r="2.1"/>
           <circle cx="215" cy="150" r="2.1"/><circle cx="221" cy="141" r="2.1"/><circle cx="223" cy="129" r="2.1"/>
@@ -728,7 +728,7 @@
 
     <svg class="art rise" viewBox="0 0 300 175" style="width:min(86vw,320px);margin-top:10px;" aria-hidden="true">
       <!-- left emblem: Chennai — Dravidian gopuram -->
-      <circle cx="68" cy="60" r="42" fill="rgba(255,255,255,.06)" stroke="var(--terra)" stroke-width="1.2"/>
+      <circle cx="68" cy="60" r="42" fill="rgba(255,255,255,.55)" stroke="var(--terra)" stroke-width="1.2"/>
       <g stroke="var(--terra)" stroke-width="1.4" fill="none" stroke-linejoin="round">
         <path class="stroke" d="M44 84h48"/>
         <path class="stroke" d="M47 84l4-13h34l4 13z"/>
@@ -749,7 +749,7 @@
             font-size="10.5" letter-spacing="1.6" fill="var(--ink-soft)">THE SOUTH</text>
 
       <!-- right emblem: Kanpur — Nagara mandir, beehive shikhara -->
-      <circle cx="232" cy="60" r="42" fill="rgba(255,255,255,.06)" stroke="var(--terra)" stroke-width="1.2"/>
+      <circle cx="232" cy="60" r="42" fill="rgba(255,255,255,.55)" stroke="var(--terra)" stroke-width="1.2"/>
       <g stroke="var(--terra)" stroke-width="1.4" fill="none" stroke-linejoin="round">
         <path class="stroke" d="M194 86h76M199 82h66M204 78h56"/>
         <path class="stroke draw" d="M210 78C210 57 218 43 232 37c14 6 22 20 22 41"/>
@@ -796,7 +796,7 @@
     <svg class="deco bl" viewBox="0 0 120 190" aria-hidden="true"><g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M74 190C68 150 60 112 46 80"/><path d="M70 168l7-3M66 150l7-3M61 132l7-3M56 114l7-3M51 98l7-3"/><g transform="translate(46,78)"><g transform="rotate(-156)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-118)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-76)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-34)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(16)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(52)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g></g><g fill="currentColor" stroke="none"><circle cx="50" cy="84" r="3.2"/><circle cx="41" cy="87" r="3"/><circle cx="47" cy="91" r="2.8"/></g></g></svg>
     <svg class="deco br" viewBox="0 0 120 190" aria-hidden="true"><g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M74 190C68 150 60 112 46 80"/><path d="M70 168l7-3M66 150l7-3M61 132l7-3M56 114l7-3M51 98l7-3"/><g transform="translate(46,78)"><g transform="rotate(-156)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-118)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-76)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(-34)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(16)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g><g transform="rotate(52)"><path d="M0 0C16-6 34-6 50 4"/><path d="M9-3l-3-9M17-5l-2-10M25-5l-1-10M33-4l1-9M41 0l3-8"/><path d="M9-3l-4 8M17-5l-3 9M25-5l-2 10M33-4l-1 10M41 0l0 9"/></g></g><g fill="currentColor" stroke="none"><circle cx="50" cy="84" r="3.2"/><circle cx="41" cy="87" r="3"/><circle cx="47" cy="91" r="2.8"/></g></g></svg>
     <svg class="art rise" viewBox="0 0 300 150" aria-hidden="true">
-      <circle cx="150" cy="56" r="24" fill="#f0a03c" opacity=".55"/>
+      <circle cx="150" cy="56" r="24" fill="#e0c98e" opacity=".6"/>
       <g stroke="var(--sky-deep)" stroke-width="1.5" fill="none">
         <path class="stroke draw" d="M10 100c14-8 28-8 42 0s28 8 42 0 28-8 42 0 28 8 42 0 28-8 42 0 28 8 42 0"/>
         <path class="stroke draw" d="M10 116c14-8 28-8 42 0s28 8 42 0 28-8 42 0 28 8 42 0 28-8 42 0 28 8 42 0"/>
