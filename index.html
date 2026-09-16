@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Caveat:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#fdf3e2;
@@ -48,7 +48,7 @@
   body{
     background:var(--page-bg);
     color:var(--ink);
-    font-family:"Cormorant Garamond", Georgia, serif;
+    font-family:"Lora", Georgia, serif;
     -webkit-font-smoothing:antialiased;
   }
 
@@ -79,14 +79,15 @@
   .s2{background:linear-gradient(170deg,#5d1728 0%,#7d2135 55%,#4a1120 100%);}
   .s3{background:linear-gradient(170deg,#5a1a2e 0%,#7d2135 68%,#48101f 100%);}  .s2b{background:linear-gradient(170deg,#4d1020 0%,#6d1b2c 50%,#5a1626 100%);}
   .states{
-    font-size:clamp(1.5rem,7vw,2rem);line-height:1.3;margin:18px 0 0;color:var(--ink);
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:clamp(1.3rem,6vw,1.75rem);line-height:1.34;margin:18px 0 0;color:var(--ink);
   }
   .states em{
-    font-family:"Caveat",cursive;font-style:normal;
-    display:block;font-size:.72em;color:var(--terra);margin:2px 0;
+    font-family:"Great Vibes",cursive;font-style:normal;
+    display:block;font-size:.9em;color:var(--terra);margin:4px 0;
   }
   .km{
-    font-family:"Caveat",cursive;font-size:1.35rem;color:var(--sky-deep);margin:12px 0 0;
+    font-family:"Great Vibes",cursive;font-size:1.5rem;color:var(--sky-deep);margin:14px 0 0;
   }
   .train{animation:ride 9s linear infinite;}
   @media (prefers-reduced-motion:reduce){ .train{animation:none;} }
@@ -97,7 +98,7 @@
   .s4{background:linear-gradient(170deg,#4a1120 0%,#6d1b2c 60%,#5d1728 100%);}
   .s5{background:linear-gradient(170deg,#7d2135 0%,#45101e 100%);}
 
-  .tam{font-family:"Noto Serif Tamil", serif;}
+  .script{font-family:"Great Vibes", cursive;}
 
   /* soft twinkling lights */
   .twinkle{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}
@@ -130,7 +131,7 @@
   @media (max-width:390px){
     .deco.bl,.deco.br{width:104px;}
   }
-  .hand{font-family:"Caveat", cursive;}
+  
 
   .rise{
     opacity:0;
@@ -162,7 +163,7 @@
   }
 
   .invoke{
-    font-family:"Noto Serif Tamil",serif;
+    font-family:"Lora", Georgia, serif;
     font-size:.92rem;letter-spacing:.14em;color:var(--terra);
     margin:0 0 6px;
   }
@@ -171,22 +172,23 @@
     color:var(--ink-soft);margin:0;
   }
   .eyebrow-tam{
-    font-family:"Noto Serif Tamil",serif;
+    font-family:"Lora", Georgia, serif;
     font-size:.8rem;color:var(--ink-soft);margin:6px 0 0;line-height:1.7;
   }
 
   .note{
-    font-size:1.02rem;line-height:1.7;color:var(--ink-soft);
+    font-size:.95rem;line-height:1.75;color:var(--ink-soft);
     max-width:330px;margin:16px auto 0;font-style:italic;
   }
   .names{
-    font-size:clamp(2.6rem,15vw,4rem);
-    line-height:1.05;font-weight:400;color:var(--ink);
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:clamp(2.2rem,12.5vw,3.5rem);
+    line-height:1.1;font-weight:500;color:var(--ink);
     margin:8px 0 0;
   }
   .amp{
-    font-family:"Caveat",cursive;
-    display:block;font-size:.5em;color:var(--terra);margin:2px 0;font-weight:500;
+    font-family:"Great Vibes",cursive;
+    display:block;font-size:.72em;color:var(--terra);margin:2px 0;font-weight:500;
   }
   @supports ((-webkit-background-clip:text) or (background-clip:text)){
     .names{
@@ -206,7 +208,7 @@
     .names{animation:none;-webkit-text-fill-color:var(--ink);}
   }
   .names-tam{
-    font-family:"Noto Serif Tamil",serif;
+    font-family:"Lora", Georgia, serif;
     font-size:1.1rem;color:var(--ink-soft);margin:14px 0 0;font-weight:500;
   }
 
@@ -214,23 +216,26 @@
     font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--terra);margin:0;
   }
   .label-tam{
-    font-family:"Noto Serif Tamil",serif;font-size:.88rem;color:var(--terra);margin:5px 0 0;
+    font-family:"Lora", Georgia, serif;font-size:.88rem;color:var(--terra);margin:5px 0 0;
   }
   .date{
-    font-size:clamp(1.6rem,7.5vw,2.1rem);margin:16px 0 2px;font-weight:400;
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:clamp(1.3rem,6.2vw,1.75rem);margin:16px 0 2px;font-weight:500;
   }
   .date-tam{
-    font-family:"Noto Serif Tamil",serif;font-size:.88rem;color:var(--ink-soft);margin:0;
+    font-family:"Lora", Georgia, serif;font-size:.88rem;color:var(--ink-soft);margin:0;
   }
   .time{
-    font-family:"Caveat",cursive;font-size:1.5rem;color:var(--terra);margin:12px 0 0;
+    font-style:italic;font-size:1.02rem;letter-spacing:.02em;
+    color:var(--terra);margin:12px 0 0;
   }
   .venue{
-    font-size:1.18rem;line-height:1.4;margin:16px 0 0;
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:1.05rem;line-height:1.45;margin:16px 0 0;
   }
   .venue small{display:block;font-size:.88rem;color:var(--ink-soft);margin-top:4px;letter-spacing:.04em;}
   .venue-tam{
-    font-family:"Noto Serif Tamil",serif;font-size:.86rem;color:var(--ink-soft);
+    font-family:"Lora", Georgia, serif;font-size:.86rem;color:var(--ink-soft);
     margin:8px 0 0;line-height:1.7;
   }
 
@@ -245,19 +250,19 @@
   .map:hover,.map:focus{background:var(--gold);color:var(--maroon-deep);}
 
   .fill{
-    font-family:"Caveat",cursive;font-size:1.4rem;
+    font-family:"Great Vibes",cursive;font-size:1.4rem;
     border-bottom:1px dashed var(--blush-deep);padding:0 10px;color:var(--blush-deep);
   }
 
   .closing-line{
-    font-family:"Noto Serif Tamil",serif;font-size:1.05rem;color:var(--terra);
+    font-family:"Playfair Display", Georgia, serif;font-size:1.05rem;color:var(--terra);
     letter-spacing:.05em;margin:0;
   }
   .closing-sub{
-    font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin:10px 0 0;
+    font-style:italic;font-size:1rem;color:var(--ink-soft);margin:10px 0 0;
   }
   .sign{
-    font-family:"Caveat",cursive;font-size:1.45rem;color:var(--ink);margin:26px 0 0;
+    font-family:"Great Vibes",cursive;font-size:1.7rem;color:var(--gold-bright);margin:26px 0 0;
   }
 
   /* opening doors */
@@ -302,9 +307,10 @@
     animation:pulse 2.6s ease-in-out infinite;
   }
   .medallion span{
-    font-size:2rem;color:var(--gold-bright);letter-spacing:.04em;
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:1.85rem;color:var(--gold-bright);letter-spacing:.04em;
   }
-  .medallion span i{font-family:"Caveat",cursive;font-style:normal;font-size:.8em;}
+  .medallion span i{font-family:"Great Vibes",cursive;font-style:normal;font-size:.95em;}
   @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.045);}}
   @media (prefers-reduced-motion:reduce){ .medallion{animation:none;} }
   .tap{
@@ -441,31 +447,87 @@
 
     <p class="invoke rise">Save the date</p>
 
-    <svg class="art rise" viewBox="0 0 300 200" style="width:min(84vw,300px);" aria-hidden="true">
-      <!-- hanging mango-leaf toran -->
-      <path class="stroke draw" stroke="var(--sage-deep)" stroke-width="1.6" d="M18 26c44 22 90 32 132 32s88-10 132-32"/>
+    <svg class="art rise" viewBox="0 0 300 215" style="width:min(86vw,306px);" aria-hidden="true">
+      <!-- toran -->
+      <path class="stroke draw" stroke="var(--sage-deep)" stroke-width="1.6" d="M18 30c44 22 90 32 132 32s88-10 132-32"/>
       <g stroke="var(--sage-deep)" stroke-width="1.4" fill="none">
-        <path class="stroke" d="M50 38c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
-        <path class="stroke" d="M82 46c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
-        <path class="stroke" d="M114 52c-7 11-7 24 0 32 7-8 7-21 0-32z"/>
-        <path class="stroke" d="M150 55c-9 13-9 29 0 39 9-10 9-26 0-39z"/>
-        <path class="stroke" d="M186 52c-7 11-7 24 0 32 7-8 7-21 0-32z"/>
-        <path class="stroke" d="M218 46c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
-        <path class="stroke" d="M250 38c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
+        <path class="stroke" d="M50 42c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
+        <path class="stroke" d="M82 50c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
+        <path class="stroke" d="M218 50c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
+        <path class="stroke" d="M250 42c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
       </g>
-      <!-- kuthuvilakku -->
+
+      <!-- little hanging flowers -->
+      <g stroke="var(--gold)" stroke-width="1" fill="none" opacity=".8">
+        <path d="M116 56v12M184 56v12M150 62v10"/>
+      </g>
+      <g>
+        <circle cx="116" cy="72" r="4.2" fill="#e8807a"/>
+        <circle cx="184" cy="72" r="4.2" fill="#e8807a"/>
+        <circle cx="150" cy="76" r="4.6" fill="#f0a03c"/>
+        <circle cx="116" cy="72" r="1.4" fill="#fff3d8"/>
+        <circle cx="184" cy="72" r="1.4" fill="#fff3d8"/>
+        <circle cx="150" cy="76" r="1.5" fill="#fff3d8"/>
+      </g>
+
+      <!-- two chubby lovebirds on the string -->
+      <g transform="translate(112,48)">
+        <path d="M-3 2v6M3 2v6" stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M-8 1l-13-5 4 6-4 5z" fill="#e8a05c"/>
+        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#f0a03c"/>
+        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#d9822f"/>
+        <circle cx="6.5" cy="-10" r="6" fill="#f0a03c"/>
+        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e8c06a"/>
+        <path d="M12-10l6 2.2-6 2.2z" fill="#e05b3a"/>
+        <circle cx="8" cy="-11.4" r="1.5" fill="#3a1410"/>
+        <circle cx="8.6" cy="-12" r=".5" fill="#fff"/>
+        <circle cx="2.5" cy="-7" r="2" fill="#e8807a" opacity=".55"/>
+      </g>
+      <g transform="translate(188,48) scale(-1,1)">
+        <path d="M-3 2v6M3 2v6" stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M-8 1l-13-5 4 6-4 5z" fill="#e8a05c"/>
+        <ellipse cx="0" cy="-2" rx="9.5" ry="8" fill="#f0a03c"/>
+        <path d="M-3-2c4-4 9-2 9 3-3 3-8 3-9-3z" fill="#d9822f"/>
+        <circle cx="6.5" cy="-10" r="6" fill="#f0a03c"/>
+        <path d="M6 -16c1-4 5-5 7-2-2 1-5 1-7 2z" fill="#e8c06a"/>
+        <path d="M12-10l6 2.2-6 2.2z" fill="#e05b3a"/>
+        <circle cx="8" cy="-11.4" r="1.5" fill="#3a1410"/>
+        <circle cx="8.6" cy="-12" r=".5" fill="#fff"/>
+        <circle cx="2.5" cy="-7" r="2" fill="#e8807a" opacity=".55"/>
+      </g>
+
+      <!-- little heart between them -->
+      <path d="M150 34c-4-4-9-1.6-9 3 0 4 5.5 7.2 9 10 3.5-2.8 9-6 9-10 0-4.6-5-7-9-3z"
+            fill="#e8807a" opacity=".95"/>
+      <path d="M150 20c-2.4-2.4-5.4-1-5.4 1.8 0 2.4 3.3 4.3 5.4 6 2.1-1.7 5.4-3.6 5.4-6 0-2.8-3-4.2-5.4-1.8z"
+            fill="#e8a05c" opacity=".7"/>
+
+      <!-- lamp -->
       <g stroke="var(--terra)" stroke-width="1.6" fill="none">
-        <path class="stroke draw" d="M150 190v-34"/>
-        <path class="stroke" d="M128 190c6-7 38-7 44 0z"/>
-        <path class="stroke" d="M138 156h24l-6 8h-12z"/>
-        <path class="stroke" d="M150 152c8-2 13-6 13-11 0-6-6-9-13-9s-13 3-13 9c0 5 5 9 13 11z"/>
+        <path class="stroke draw" d="M150 204v-32"/>
+        <path class="stroke" d="M129 204c6-7 36-7 42 0z"/>
+        <path class="stroke" d="M139 172h22l-5 8h-12z"/>
+        <path class="stroke" d="M150 168c7.5-2 12-5.5 12-10.5 0-5.5-5.5-8.5-12-8.5s-12 3-12 8.5c0 5 4.5 8.5 12 10.5z"/>
       </g>
-      <path d="M150 132c0-9 6-12 6-21 4 6 9 9 9 17 0 8-6 14-15 14s-15-6-15-14c0-6 4-10 8-13 0 8 7 9 7 17z"
-            fill="#ffc35c" opacity=".85"/>
-      <!-- kolam dots -->
-      <g fill="var(--blush-deep)" opacity=".7">
-        <circle cx="96" cy="182" r="2"/><circle cx="110" cy="176" r="2"/><circle cx="124" cy="172" r="2"/>
-        <circle cx="204" cy="182" r="2"/><circle cx="190" cy="176" r="2"/><circle cx="176" cy="172" r="2"/>
+      <path d="M150 150c0-8 5.5-11 5.5-19.5 3.5 5.5 8 8 8 15.5 0 7.5-5.5 13-13.5 13s-13.5-5.5-13.5-13c0-5.5 3.5-9 7-12 0 7.5 6.5 8 6.5 16z"
+            fill="#ffc35c" opacity=".9"/>
+
+      <!-- small flowers at the base -->
+      <g>
+        <circle cx="116" cy="198" r="3.4" fill="#f0a03c" opacity=".85"/>
+        <circle cx="106" cy="203" r="2.6" fill="#e8807a" opacity=".8"/>
+        <circle cx="184" cy="198" r="3.4" fill="#f0a03c" opacity=".85"/>
+        <circle cx="194" cy="203" r="2.6" fill="#e8807a" opacity=".8"/>
+        <circle cx="126" cy="205" r="2" fill="#e8c06a" opacity=".75"/>
+        <circle cx="174" cy="205" r="2" fill="#e8c06a" opacity=".75"/>
+      </g>
+
+      <!-- sparkles -->
+      <g fill="var(--gold-bright)" opacity=".85">
+        <path d="M66 96l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z"/>
+        <path d="M234 96l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z"/>
+        <path d="M96 140l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z"/>
+        <path d="M204 140l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z"/>
       </g>
     </svg>
 
@@ -681,9 +743,9 @@
         <circle cx="63" cy="38" r="1.9"/><circle cx="68" cy="37" r="1.9"/><circle cx="73" cy="38" r="1.9"/>
       </g>
 
-      <text x="68" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif"
+      <text x="68" y="122" text-anchor="middle" font-family="Playfair Display, serif"
             font-size="15" fill="var(--ink)">Chennai</text>
-      <text x="68" y="138" text-anchor="middle" font-family="Cormorant Garamond, serif"
+      <text x="68" y="138" text-anchor="middle" font-family="Playfair Display, serif"
             font-size="10.5" letter-spacing="1.6" fill="var(--ink-soft)">THE SOUTH</text>
 
       <!-- right emblem: Kanpur — Nagara mandir, beehive shikhara -->
@@ -702,9 +764,9 @@
       <path class="stroke" d="M232 26v-6" stroke="var(--gold)" stroke-width="1.4" fill="none"/>
       <path d="M232 20l12 4-12 4z" fill="var(--marigold)"/>
 
-      <text x="232" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif"
+      <text x="232" y="122" text-anchor="middle" font-family="Playfair Display, serif"
             font-size="15" fill="var(--ink)">Kanpur</text>
-      <text x="232" y="138" text-anchor="middle" font-family="Cormorant Garamond, serif"
+      <text x="232" y="138" text-anchor="middle" font-family="Playfair Display, serif"
             font-size="10.5" letter-spacing="1.6" fill="var(--ink-soft)">THE NORTH</text>
 
       <!-- joining arc -->
