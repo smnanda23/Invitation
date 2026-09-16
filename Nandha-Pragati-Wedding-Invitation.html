@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nandha &amp; Pragati — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Caveat:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf7f0;
+    --blush:#f7dcd6;
+    --blush-deep:#e3ada4;
+    --sage:#d8e4d6;
+    --sage-deep:#8fa98d;
+    --sky:#dde8f0;
+    --sky-deep:#8fa8bb;
+    --sand:#f3e6d4;
+    --terra:#c2806c;
+    --ink:#4d443e;
+    --ink-soft:#7d726a;
+    --gold:#c9a86a;
+    --page-bg:#fdf7f0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --page-bg:#fdf7f0;
+    }
+  }
+  :root[data-theme="dark"]{ --page-bg:#fdf7f0; }
+
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--page-bg);
+    color:var(--ink);
+    font-family:"Cormorant Garamond", Georgia, serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .deck{
+    height:100svh;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+    scroll-behavior:smooth;
+  }
+  .deck::-webkit-scrollbar{display:none;}
+  .deck{scrollbar-width:none;}
+
+  .slide{
+    min-height:100svh;
+    scroll-snap-align:start;
+    scroll-snap-stop:always;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:56px 26px;
+    overflow:hidden;
+  }
+  .s1{background:linear-gradient(170deg,var(--cream) 0%,var(--blush) 100%);}
+  .s2{background:linear-gradient(170deg,var(--blush) 0%,var(--cream) 55%,var(--sand) 100%);}
+  .s3{background:linear-gradient(170deg,var(--sky) 0%,var(--cream) 70%,var(--sand) 100%);}  .s2b{background:linear-gradient(170deg,var(--sand) 0%,var(--cream) 50%,var(--sky) 100%);}
+  .states{
+    font-size:clamp(1.5rem,7vw,2rem);line-height:1.3;margin:18px 0 0;color:var(--ink);
+  }
+  .states em{
+    font-family:"Caveat",cursive;font-style:normal;
+    display:block;font-size:.72em;color:var(--terra);margin:2px 0;
+  }
+  .km{
+    font-family:"Caveat",cursive;font-size:1.35rem;color:var(--sky-deep);margin:12px 0 0;
+  }
+  .train{animation:ride 9s linear infinite;}
+  @media (prefers-reduced-motion:reduce){ .train{animation:none;} }
+  @keyframes ride{
+    0%{transform:translateX(-70px);}
+    100%{transform:translateX(330px);}
+  }
+  .s4{background:linear-gradient(170deg,var(--sand) 0%,var(--cream) 60%,var(--blush) 100%);}
+  .s5{background:linear-gradient(170deg,var(--sage) 0%,var(--cream) 100%);}
+
+  .tam{font-family:"Noto Serif Tamil", serif;}
+  .hand{font-family:"Caveat", cursive;}
+
+  .rise{
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.3,1);
+  }
+  .in .rise{opacity:1;transform:none;}
+  .in .rise:nth-child(2){transition-delay:.12s;}
+  .in .rise:nth-child(3){transition-delay:.24s;}
+  .in .rise:nth-child(4){transition-delay:.36s;}
+  .in .rise:nth-child(5){transition-delay:.48s;}
+  .in .rise:nth-child(6){transition-delay:.6s;}
+  .in .rise:nth-child(7){transition-delay:.72s;}
+  .in .rise:nth-child(8){transition-delay:.84s;}
+  .in .rise:nth-child(9){transition-delay:.96s;}
+  .in .rise:nth-child(10){transition-delay:1.08s;}
+  @media (prefers-reduced-motion:reduce){
+    .rise{opacity:1;transform:none;transition:none;}
+  }
+
+  .art{width:min(78vw,300px);height:auto;display:block;margin:0 auto;}
+  .art .stroke{fill:none;stroke-linecap:round;stroke-linejoin:round;}
+
+  .draw{stroke-dasharray:1200;stroke-dashoffset:1200;}
+  .in .draw{animation:draw 2.4s ease forwards;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @media (prefers-reduced-motion:reduce){
+    .draw{stroke-dashoffset:0;animation:none;}
+  }
+
+  .invoke{
+    font-family:"Noto Serif Tamil",serif;
+    font-size:.92rem;letter-spacing:.14em;color:var(--terra);
+    margin:0 0 6px;
+  }
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;
+    color:var(--ink-soft);margin:0;
+  }
+  .eyebrow-tam{
+    font-family:"Noto Serif Tamil",serif;
+    font-size:.8rem;color:var(--ink-soft);margin:6px 0 0;line-height:1.7;
+  }
+
+  .note{
+    font-size:1.02rem;line-height:1.7;color:var(--ink-soft);
+    max-width:330px;margin:16px auto 0;font-style:italic;
+  }
+  .names{
+    font-size:clamp(2.6rem,15vw,4rem);
+    line-height:1.05;font-weight:400;color:var(--ink);
+    margin:8px 0 0;
+  }
+  .amp{
+    font-family:"Caveat",cursive;
+    display:block;font-size:.5em;color:var(--terra);margin:2px 0;font-weight:500;
+  }
+  .names-tam{
+    font-family:"Noto Serif Tamil",serif;
+    font-size:1.1rem;color:var(--ink-soft);margin:14px 0 0;font-weight:500;
+  }
+
+  .label{
+    font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--terra);margin:0;
+  }
+  .label-tam{
+    font-family:"Noto Serif Tamil",serif;font-size:.88rem;color:var(--terra);margin:5px 0 0;
+  }
+  .date{
+    font-size:clamp(1.6rem,7.5vw,2.1rem);margin:16px 0 2px;font-weight:400;
+  }
+  .date-tam{
+    font-family:"Noto Serif Tamil",serif;font-size:.88rem;color:var(--ink-soft);margin:0;
+  }
+  .time{
+    font-family:"Caveat",cursive;font-size:1.5rem;color:var(--terra);margin:12px 0 0;
+  }
+  .venue{
+    font-size:1.18rem;line-height:1.4;margin:16px 0 0;
+  }
+  .venue small{display:block;font-size:.88rem;color:var(--ink-soft);margin-top:4px;letter-spacing:.04em;}
+  .venue-tam{
+    font-family:"Noto Serif Tamil",serif;font-size:.86rem;color:var(--ink-soft);
+    margin:8px 0 0;line-height:1.7;
+  }
+
+  .map{
+    display:inline-block;margin-top:22px;padding:11px 26px;
+    border:1px solid var(--terra);border-radius:999px;
+    color:var(--terra);text-decoration:none;
+    font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    background:rgba(255,255,255,.45);
+    transition:background .25s ease,color .25s ease;
+  }
+  .map:hover,.map:focus{background:var(--terra);color:#fff;}
+
+  .fill{
+    font-family:"Caveat",cursive;font-size:1.4rem;
+    border-bottom:1px dashed var(--blush-deep);padding:0 10px;color:var(--blush-deep);
+  }
+
+  .closing-line{
+    font-family:"Noto Serif Tamil",serif;font-size:1.05rem;color:var(--terra);
+    letter-spacing:.05em;margin:0;
+  }
+  .closing-sub{
+    font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin:10px 0 0;
+  }
+  .sign{
+    font-family:"Caveat",cursive;font-size:1.45rem;color:var(--ink);margin:26px 0 0;
+  }
+
+  /* opening doors */
+  body.locked .deck{overflow:hidden;}
+  .gate{position:fixed;inset:0;z-index:60;}
+  .gate.open{pointer-events:none;}
+  .gate .panel{
+    position:absolute;top:0;bottom:0;width:50.4%;
+    background:linear-gradient(200deg,var(--cream) 0%,var(--blush) 85%);
+    transition:transform 1.9s cubic-bezier(.62,.02,.2,1);
+    overflow:hidden;
+  }
+  .gate .panel.left{left:0;box-shadow:inset -14px 0 22px -14px rgba(77,68,62,.35);}
+  .gate .panel.right{right:0;box-shadow:inset 14px 0 22px -14px rgba(77,68,62,.35);}
+  .gate.open .panel.left{transform:translateX(-101%);}
+  .gate.open .panel.right{transform:translateX(101%);}
+  .gate .panel::after{
+    content:"";position:absolute;top:26px;bottom:26px;
+    border:1px solid var(--terra);opacity:.45;
+  }
+  .gate .panel.left::after{left:26px;right:0;border-right:none;}
+  .gate .panel.right::after{right:26px;left:0;border-left:none;}
+  .vine{position:absolute;width:112px;opacity:.6;color:var(--sage-deep);}
+  .vine.a{top:44px;}
+  .vine.b{bottom:44px;transform:scaleY(-1);}
+  .panel.left .vine{left:40px;}
+  .panel.right .vine{right:40px;transform:scaleX(-1);}
+  .panel.right .vine.b{transform:scale(-1,-1);}
+
+  .latch{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    z-index:2;text-align:center;transition:opacity .55s ease;
+  }
+  .gate.open .latch{opacity:0;}
+  .medallion{
+    width:118px;height:118px;border-radius:50%;
+    border:1px solid var(--terra);
+    background:rgba(255,255,255,.55);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto;
+    box-shadow:0 6px 24px rgba(77,68,62,.14);
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  .medallion span{
+    font-size:2rem;color:var(--terra);letter-spacing:.04em;
+  }
+  .medallion span i{font-family:"Caveat",cursive;font-style:normal;font-size:.8em;}
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.045);}}
+  @media (prefers-reduced-motion:reduce){ .medallion{animation:none;} }
+  .tap{
+    margin-top:20px;font-size:.66rem;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .tap svg{display:block;margin:10px auto 0;width:34px;color:var(--terra);opacity:.75;}
+
+  /* sound toggle */
+  .sound{
+    position:fixed;left:14px;bottom:16px;z-index:40;
+    width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--terra);background:rgba(255,255,255,.6);
+    color:var(--terra);display:none;align-items:center;justify-content:center;
+    cursor:pointer;padding:0;opacity:0;transition:opacity .6s ease;
+  }
+  .sound.show{display:flex;opacity:.85;}
+  .sound svg{width:19px;height:19px;}
+  .sound .off{display:none;}
+  .sound.muted .on{display:none;}
+  .sound.muted .off{display:block;}
+
+  /* progress dots */
+  .dots{
+    position:fixed;right:12px;top:50%;transform:translateY(-50%);
+    display:flex;flex-direction:column;gap:9px;z-index:20;
+  }
+  .dots b{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--ink-soft);opacity:.28;transition:opacity .3s ease,transform .3s ease;
+  }
+  .dots b.on{opacity:.85;transform:scale(1.45);}
+
+  /* swipe hint */
+  .hint{
+    position:absolute;bottom:26px;left:0;right:0;
+    font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);
+    animation:bob 2.2s ease-in-out infinite;transition:opacity .5s ease;
+  }
+  .hint svg{display:block;margin:7px auto 0;width:14px;color:var(--ink-soft);}
+  .hint.gone{opacity:0;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+
+  /* drifting petals */
+  .petals{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+  .petals i{
+    position:absolute;top:-8%;width:13px;height:13px;
+    background:var(--blush-deep);opacity:.4;
+    border-radius:60% 0 60% 0;
+    animation:fall linear infinite;
+  }
+  .petals i:nth-child(1){left:8%;animation-duration:13s;animation-delay:0s;}
+  .petals i:nth-child(2){left:26%;animation-duration:17s;animation-delay:-4s;width:9px;height:9px;}
+  .petals i:nth-child(3){left:47%;animation-duration:15s;animation-delay:-8s;}
+  .petals i:nth-child(4){left:68%;animation-duration:19s;animation-delay:-2s;width:10px;height:10px;}
+  .petals i:nth-child(5){left:86%;animation-duration:14s;animation-delay:-11s;}
+  @keyframes fall{
+    0%{transform:translateY(0) rotate(0deg);opacity:0;}
+    12%{opacity:.45;}
+    100%{transform:translateY(118svh) rotate(420deg);opacity:0;}
+  }
+  @media (prefers-reduced-motion:reduce){ .petals{display:none;} .hint{animation:none;} }
+</style>
+</head>
+<body class="locked">
+
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Tap to open the invitation">
+  <div class="panel left">
+    <svg class="vine a" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M2 4c26 6 46 20 60 42"/>
+      <path d="M22 12c-4 8-2 15 5 18 1-8-1-14-5-18z"/>
+      <path d="M44 24c-5 7-4 14 3 18 0-8-1-14-3-18z"/>
+      <path d="M32 6c7 3 10 9 8 16-5-4-8-9-8-16z"/>
+      <circle cx="62" cy="46" r="3.4" fill="currentColor" stroke="none" opacity=".8"/>
+      <circle cx="52" cy="36" r="2.2" fill="currentColor" stroke="none" opacity=".6"/>
+    </svg>
+    <svg class="vine b" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M2 4c26 6 46 20 60 42"/>
+      <path d="M22 12c-4 8-2 15 5 18 1-8-1-14-5-18z"/>
+      <path d="M44 24c-5 7-4 14 3 18 0-8-1-14-3-18z"/>
+      <path d="M32 6c7 3 10 9 8 16-5-4-8-9-8-16z"/>
+      <circle cx="62" cy="46" r="3.4" fill="currentColor" stroke="none" opacity=".8"/>
+      <circle cx="52" cy="36" r="2.2" fill="currentColor" stroke="none" opacity=".6"/>
+    </svg>
+  </div>
+
+  <div class="panel right">
+    <svg class="vine a" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M2 4c26 6 46 20 60 42"/>
+      <path d="M22 12c-4 8-2 15 5 18 1-8-1-14-5-18z"/>
+      <path d="M44 24c-5 7-4 14 3 18 0-8-1-14-3-18z"/>
+      <path d="M32 6c7 3 10 9 8 16-5-4-8-9-8-16z"/>
+      <circle cx="62" cy="46" r="3.4" fill="currentColor" stroke="none" opacity=".8"/>
+      <circle cx="52" cy="36" r="2.2" fill="currentColor" stroke="none" opacity=".6"/>
+    </svg>
+    <svg class="vine b" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M2 4c26 6 46 20 60 42"/>
+      <path d="M22 12c-4 8-2 15 5 18 1-8-1-14-5-18z"/>
+      <path d="M44 24c-5 7-4 14 3 18 0-8-1-14-3-18z"/>
+      <path d="M32 6c7 3 10 9 8 16-5-4-8-9-8-16z"/>
+      <circle cx="62" cy="46" r="3.4" fill="currentColor" stroke="none" opacity=".8"/>
+      <circle cx="52" cy="36" r="2.2" fill="currentColor" stroke="none" opacity=".6"/>
+    </svg>
+  </div>
+
+  <div class="latch">
+    <div class="medallion"><span>N<i>&amp;</i>P</span></div>
+    <p class="tap">Tap to open
+      <svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 12H4M10 6l-6 6 6 6"/>
+        <path d="M28 12h16M38 6l6 6-6 6"/>
+      </svg>
+    </p>
+  </div>
+</div>
+
+<button class="sound" id="sound" aria-label="Toggle music">
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+</button>
+
+<div class="dots" id="dots" aria-hidden="true"></div>
+
+<div class="deck" id="deck">
+
+  <!-- 1 — opening -->
+  <section class="slide s1">
+    <div class="petals"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <p class="invoke rise">Save the date</p>
+
+    <svg class="art rise" viewBox="0 0 300 200" aria-hidden="true">
+      <!-- hanging mango-leaf toran -->
+      <path class="stroke draw" stroke="var(--sage-deep)" stroke-width="1.6" d="M18 26c44 22 90 32 132 32s88-10 132-32"/>
+      <g stroke="var(--sage-deep)" stroke-width="1.4" fill="none">
+        <path class="stroke" d="M50 38c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
+        <path class="stroke" d="M82 46c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
+        <path class="stroke" d="M114 52c-7 11-7 24 0 32 7-8 7-21 0-32z"/>
+        <path class="stroke" d="M150 55c-9 13-9 29 0 39 9-10 9-26 0-39z"/>
+        <path class="stroke" d="M186 52c-7 11-7 24 0 32 7-8 7-21 0-32z"/>
+        <path class="stroke" d="M218 46c-8 12-8 26 0 35 8-9 8-23 0-35z"/>
+        <path class="stroke" d="M250 38c-7 10-7 22 0 30 7-8 7-20 0-30z"/>
+      </g>
+      <!-- kuthuvilakku lamp -->
+      <g stroke="var(--terra)" stroke-width="1.6" fill="none">
+        <path class="stroke draw" d="M150 190v-34"/>
+        <path class="stroke" d="M128 190c6-7 38-7 44 0z"/>
+        <path class="stroke" d="M138 156h24l-6 8h-12z"/>
+        <path class="stroke" d="M150 152c8-2 13-6 13-11 0-6-6-9-13-9s-13 3-13 9c0 5 5 9 13 11z"/>
+      </g>
+      <path d="M150 132c0-9 6-12 6-21 4 6 9 9 9 17 0 8-6 14-15 14s-15-6-15-14c0-6 4-10 8-13 0 8 7 9 7 17z"
+            fill="var(--gold)" opacity=".75"/>
+      <!-- small kolam dots -->
+      <g fill="var(--blush-deep)" opacity=".7">
+        <circle cx="96" cy="182" r="2"/><circle cx="110" cy="176" r="2"/><circle cx="124" cy="172" r="2"/>
+        <circle cx="204" cy="182" r="2"/><circle cx="190" cy="176" r="2"/><circle cx="176" cy="172" r="2"/>
+      </g>
+    </svg>
+
+    <p class="eyebrow rise" style="margin-top:26px;">You are invited</p>
+    <p class="note rise">Two days of family, feasting and celebration — one evening by the sea, one morning at the temple. We would love to have you with us for both.</p>
+
+    <div class="hint" id="hint">Swipe up
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- 2 — names -->
+  <section class="slide s2">
+    <div class="petals"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <svg class="art rise" viewBox="0 0 300 120" style="width:min(70vw,270px);margin-bottom:6px;" aria-hidden="true">
+      <!-- floral arch -->
+      <path class="stroke draw" stroke="var(--sage-deep)" stroke-width="1.6" fill="none"
+            d="M30 112C30 52 82 14 150 14s120 38 120 98"/>
+      <g stroke="var(--sage-deep)" stroke-width="1.2" fill="none" opacity=".9">
+        <path class="stroke" d="M64 62c-10-4-16-12-15-20 9 1 16 8 18 18"/>
+        <path class="stroke" d="M236 62c10-4 16-12 15-20-9 1-16 8-18 18"/>
+        <path class="stroke" d="M104 34c-8-6-11-14-8-21 8 3 13 11 12 20"/>
+        <path class="stroke" d="M196 34c8-6 11-14 8-21-8 3-13 11-12 20"/>
+      </g>
+      <g fill="var(--blush-deep)" opacity=".85">
+        <circle cx="150" cy="14" r="5"/><circle cx="118" cy="22" r="3.6"/><circle cx="182" cy="22" r="3.6"/>
+        <circle cx="88" cy="44" r="3.2"/><circle cx="212" cy="44" r="3.2"/>
+        <circle cx="62" cy="76" r="2.6"/><circle cx="238" cy="76" r="2.6"/>
+      </g>
+      <g fill="var(--gold)" opacity=".7">
+        <circle cx="134" cy="17" r="2"/><circle cx="166" cy="17" r="2"/>
+        <circle cx="102" cy="31" r="1.8"/><circle cx="198" cy="31" r="1.8"/>
+      </g>
+    </svg>
+
+    <h1 class="names rise">Nandha<span class="amp">&amp;</span>Pragati</h1>
+    <p class="eyebrow rise" style="margin-top:20px;">are getting married</p>
+    <p class="note rise">A Chennai boy and a Kanpur girl, two languages and about two thousand kilometres. Together with their parents, they ask for your company — and your blessings — as all of it becomes one family.</p>
+  </section>
+
+  <!-- 3 — two states -->
+  <section class="slide s2b">
+    <p class="label rise">A wedding of two cities</p>
+
+    <svg class="art rise" viewBox="0 0 300 175" style="width:min(86vw,320px);margin-top:10px;" aria-hidden="true">
+      <!-- left emblem: Tamil Nadu -->
+      <circle cx="68" cy="60" r="42" fill="rgba(255,255,255,.45)" stroke="var(--terra)" stroke-width="1.2"/>
+      <g stroke="var(--terra)" stroke-width="1.5" fill="none">
+        <path class="stroke" d="M48 82V54l20-18 20 18v28"/>
+        <path class="stroke" d="M53 70h30M51 61h34"/>
+        <path class="stroke" d="M68 36v-7M63 29h10"/>
+        <path class="stroke" d="M44 82h48"/>
+      </g>
+      <text x="68" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif"
+            font-size="15" fill="var(--ink)">Chennai</text>
+      <text x="68" y="138" text-anchor="middle" font-family="Cormorant Garamond, serif"
+            font-size="10.5" letter-spacing="1.6" fill="var(--ink-soft)">THE SOUTH</text>
+
+      <!-- right emblem: Uttar Pradesh -->
+      <circle cx="232" cy="60" r="42" fill="rgba(255,255,255,.45)" stroke="var(--sky-deep)" stroke-width="1.2"/>
+      <g stroke="var(--sky-deep)" stroke-width="1.5" fill="none">
+        <path class="stroke" d="M212 82V56a20 20 0 0 1 40 0v26"/>
+        <path class="stroke" d="M222 82V64a10 10 0 0 1 20 0v18"/>
+        <path class="stroke" d="M232 36v-8M228 28h8"/>
+        <path class="stroke" d="M208 82h48"/>
+        <path class="stroke" d="M206 82V64M258 82V64"/>
+      </g>
+      <text x="232" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif"
+            font-size="15" fill="var(--ink)">Kanpur</text>
+      <text x="232" y="138" text-anchor="middle" font-family="Cormorant Garamond, serif"
+            font-size="10.5" letter-spacing="1.6" fill="var(--ink-soft)">THE NORTH</text>
+
+      <!-- joining arc -->
+      <path class="stroke" d="M112 52C132 26 168 26 188 52"
+            stroke="var(--blush-deep)" stroke-width="1.6" fill="none" stroke-dasharray="3 6"/>
+      <path d="M150 30c-5-4-11-2-11 4 0 5 7 9 11 13 4-4 11-8 11-13 0-6-6-8-11-4z"
+            fill="var(--blush-deep)" opacity=".85"/>
+
+      <!-- little train -->
+      <g class="train" stroke="var(--ink-soft)" stroke-width="1.3" fill="none" opacity=".55">
+        <path class="stroke" d="M0 168h64"/>
+        <path class="stroke" d="M4 166v-11h18v11M26 166v-9h16v9M46 166v-9h16v9"/>
+        <circle cx="10" cy="168" r="2"/><circle cx="18" cy="168" r="2"/>
+        <circle cx="32" cy="168" r="2"/><circle cx="54" cy="168" r="2"/>
+        <path class="stroke" d="M8 155v-4"/>
+      </g>
+    </svg>
+
+    <h2 class="states rise">Kanpur<em>to</em>Chennai</h2>
+    <p class="km rise">about 2,000 km, one wedding</p>
+    <p class="note rise">Nandha's family is from Chennai, Pragati's from Kanpur. Different languages, different kitchens, different songs at the same celebration — and from this October, one family. Come ready for a bit of both.</p>
+  </section>
+
+  <!-- 4 — reception -->
+  <section class="slide s3">
+    <svg class="art rise" viewBox="0 0 300 150" aria-hidden="true">
+      <circle cx="150" cy="56" r="24" fill="var(--sand)" opacity=".95"/>
+      <g stroke="var(--sky-deep)" stroke-width="1.5" fill="none">
+        <path class="stroke draw" d="M10 100c14-8 28-8 42 0s28 8 42 0 28-8 42 0 28 8 42 0 28-8 42 0 28 8 42 0"/>
+        <path class="stroke draw" d="M10 116c14-8 28-8 42 0s28 8 42 0 28-8 42 0 28 8 42 0 28-8 42 0 28 8 42 0"/>
+        <path class="stroke draw" d="M10 132c14-8 28-8 42 0s28 8 42 0 28-8 42 0 28 8 42 0 28-8 42 0 28 8 42 0"/>
+      </g>
+      <!-- palms -->
+      <g stroke="var(--sage-deep)" stroke-width="1.6" fill="none">
+        <path class="stroke" d="M46 100c2-22 0-36-6-46"/>
+        <path class="stroke" d="M40 54c-10-7-21-7-28 1 11 3 20 3 28-1z"/>
+        <path class="stroke" d="M40 54c-4-12-13-19-24-19 7 9 15 15 24 19z"/>
+        <path class="stroke" d="M40 54c10-7 21-8 29-2-11 4-20 5-29 2z"/>
+        <path class="stroke" d="M40 54c3-12 12-20 23-21-7 10-14 17-23 21z"/>
+        <path class="stroke" d="M258 100c-2-18 0-30 5-38"/>
+        <path class="stroke" d="M263 62c8-6 17-6 23 1-9 2-16 2-23-1z"/>
+        <path class="stroke" d="M263 62c-3-10-11-16-20-16 6 7 12 13 20 16z"/>
+        <path class="stroke" d="M263 62c-8-6-17-6-24 1 9 2 17 2 24-1z"/>
+      </g>
+      <!-- birds -->
+      <g stroke="var(--ink-soft)" stroke-width="1.2" fill="none" opacity=".6">
+        <path class="stroke" d="M98 34c4-5 8-5 11 0 3-5 7-5 11 0"/>
+        <path class="stroke" d="M186 22c3-4 6-4 9 0 2-4 6-4 9 0"/>
+      </g>
+    </svg>
+
+    <p class="label rise" style="margin-top:22px;">Reception</p>
+    <p class="date rise">Saturday, 24 October 2026</p>
+    <p class="time rise">6:00 in the evening onwards</p>
+    <p class="venue rise">Shelter Beach Resort<small>East Coast Road, Chennai</small></p>
+    <p class="note rise">An evening on the shore — dinner, music and the sound of the waves, as both families meet and the celebration begins.</p>
+    <a class="map rise" href="https://www.google.com/maps/search/?api=1&amp;query=Shelter+Beach+Resort+ECR+Chennai" target="_blank" rel="noopener">View map</a>
+  </section>
+
+  <!-- 4 — muhurtham -->
+  <section class="slide s4">
+    <svg class="art rise" viewBox="0 0 300 150" aria-hidden="true">
+      <!-- gopuram -->
+      <g stroke="var(--terra)" stroke-width="1.6" fill="none">
+        <path class="stroke draw" d="M104 140V66l46-40 46 40v74"/>
+        <path class="stroke" d="M112 118h76M110 100h80M114 84h72"/>
+        <path class="stroke" d="M138 140v-28c0-7 5-12 12-12s12 5 12 12v28"/>
+        <path class="stroke" d="M150 26V12"/>
+        <path class="stroke" d="M140 12h20"/>
+        <path class="stroke" d="M96 140h108"/>
+      </g>
+      <g fill="var(--gold)" opacity=".6">
+        <circle cx="150" cy="8" r="3.4"/><circle cx="124" cy="60" r="2.2"/><circle cx="176" cy="60" r="2.2"/>
+      </g>
+      <!-- flanking lamps -->
+      <g stroke="var(--terra)" stroke-width="1.4" fill="none">
+        <path class="stroke" d="M56 140v-20M44 140c4-5 20-5 24 0zM50 120h12l-3 5h-6z"/>
+        <path class="stroke" d="M244 140v-20M232 140c4-5 20-5 24 0zM238 120h12l-3 5h-6z"/>
+      </g>
+      <path d="M56 116c0-5 3-7 3-12 3 4 5 6 5 10 0 5-3 8-8 8s-8-3-8-8c0-3 2-5 4-7 0 5 4 5 4 9z" fill="var(--gold)" opacity=".8"/>
+      <path d="M244 116c0-5 3-7 3-12 3 4 5 6 5 10 0 5-3 8-8 8s-8-3-8-8c0-3 2-5 4-7 0 5 4 5 4 9z" fill="var(--gold)" opacity=".8"/>
+    </svg>
+
+    <p class="label rise" style="margin-top:22px;">Wedding Ceremony</p>
+    <p class="date rise">Sunday, 25 October 2026</p>
+    <p class="time rise">6:00 to 7:30 in the morning</p>
+    <p class="venue rise">Arupadai Veedu Murugan Temple<small>Besant Nagar, Chennai</small></p>
+    <p class="note rise">The vows are exchanged here, in the presence of family and close friends. It is an early start, so do try to be seated by a quarter to six — the quiet before it begins is the best part.</p>
+    <a class="map rise" href="https://www.google.com/maps/search/?api=1&amp;query=Arupadai+Veedu+Murugan+Temple+Besant+Nagar+Chennai" target="_blank" rel="noopener">View map</a>
+  </section>
+
+  <!-- 5 — closing -->
+  <section class="slide s5">
+    <div class="petals"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <svg class="art rise" viewBox="0 0 300 130" style="width:min(64vw,240px);" aria-hidden="true">
+      <g stroke="var(--sage-deep)" stroke-width="1.5" fill="none">
+        <path class="stroke draw" d="M40 118c28-12 50-34 60-62"/>
+        <path class="stroke draw" d="M260 118c-28-12-50-34-60-62"/>
+        <path class="stroke" d="M84 82c-9-2-15-9-15-17 8 0 15 6 17 15"/>
+        <path class="stroke" d="M216 82c9-2 15-9 15-17-8 0-15 6-17 15"/>
+      </g>
+      <g fill="var(--blush-deep)" opacity=".8">
+        <circle cx="106" cy="52" r="4"/><circle cx="194" cy="52" r="4"/>
+        <circle cx="88" cy="76" r="2.8"/><circle cx="212" cy="76" r="2.8"/>
+        <circle cx="62" cy="102" r="2.4"/><circle cx="238" cy="102" r="2.4"/>
+      </g>
+      <path d="M150 74c-10-8-22-4-22 7 0 10 13 18 22 25 9-7 22-15 22-25 0-11-12-15-22-7z"
+            fill="none" stroke="var(--terra)" stroke-width="1.6" class="stroke"/>
+    </svg>
+
+    <p class="closing-line rise" style="margin-top:26px;">Your presence is our blessing</p>
+    <p class="closing-sub rise">We look forward to celebrating with you</p>
+    <p class="note rise">Come hungry, stay late, and send them off with your good wishes. A wedding is only as warm as the people in the room, and we would very much like you to be one of them.</p>
+    <p class="sign rise">With love, both families</p>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var deck = document.getElementById('deck');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var dots = document.getElementById('dots');
+  var hint = document.getElementById('hint');
+
+  slides.forEach(function(){
+    var b = document.createElement('b');
+    dots.appendChild(b);
+  });
+  var marks = dots.querySelectorAll('b');
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var i = slides.indexOf(e.target);
+        if (e.isIntersecting && e.intersectionRatio > 0.55) {
+          e.target.classList.add('in');
+          marks.forEach(function(m, mi){ m.classList.toggle('on', mi === i); });
+        }
+      });
+    }, { root: deck, threshold: [0, 0.55, 1] });
+    slides.forEach(function(s){ io.observe(s); });
+  } else {
+    slides.forEach(function(s){ s.classList.add('in'); });
+    marks[0].classList.add('on');
+  }
+
+  slides[0].classList.add('in');
+  marks[0].classList.add('on');
+
+  deck.addEventListener('scroll', function(){
+    if (deck.scrollTop > 40 && hint) hint.classList.add('gone');
+  }, { passive: true });
+
+  var gate = document.getElementById('gate');
+  var opened = false;
+
+  /* ---------------------------------------------------------------
+     MUSIC — an original melody generated live in the browser.
+     Nothing is downloaded; it is written note by note in code below.
+     To use your own track instead: delete this music block, add
+     <audio id="bgm" src="your-song.mp3" loop></audio> to the page,
+     and call document.getElementById('bgm').play() inside openGate().
+     --------------------------------------------------------------- */
+  var music = (function(){
+    var ctx, master, wet, delay, feedback, tone;
+    var scale = [293.66, 329.63, 369.99, 440.00, 493.88, 587.33, 659.25, 739.99];
+    var phrase = [0,2,4,5,4,2,3,1, 0,2,5,7,5,4,2,1, 3,5,7,5,4,2,1,0];
+    var i = 0, nextAt = 0, timer = null, started = false;
+    var STEP = 0.46;
+
+    function pluck(freq, t, vol){
+      var o = ctx.createOscillator(), g = ctx.createGain(), f = ctx.createBiquadFilter();
+      o.type = 'triangle';
+      o.frequency.value = freq;
+      f.type = 'lowpass';
+      f.frequency.setValueAtTime(2400, t);
+      f.frequency.exponentialRampToValueAtTime(700, t + 1.2);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(vol, t + 0.03);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 1.6);
+      o.connect(f); f.connect(g); g.connect(master); g.connect(wet);
+      o.start(t); o.stop(t + 1.7);
+    }
+
+    function drone(){
+      [146.83, 220.00].forEach(function(f, n){
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = 'sine';
+        o.frequency.value = f;
+        o.detune.value = n ? 7 : -7;
+        g.gain.value = 0.030;
+        o.connect(g); g.connect(master);
+        o.start();
+      });
+    }
+
+    function schedule(){
+      while (nextAt < ctx.currentTime + 0.35) {
+        var deg = phrase[i % phrase.length];
+        pluck(scale[deg], nextAt, 0.16);
+        if (i % 8 === 0) pluck(scale[deg] / 2, nextAt, 0.10);
+        if (i % 4 === 2) pluck(scale[(deg + 2) % scale.length] * 2, nextAt + STEP / 2, 0.055);
+        nextAt += STEP;
+        i++;
+      }
+    }
+
+    return {
+      start: function(){
+        if (started) return;
+        started = true;
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        ctx = new AC();
+        master = ctx.createGain();
+        master.gain.value = 0.0001;
+        master.connect(ctx.destination);
+        delay = ctx.createDelay(1.0);
+        delay.delayTime.value = 0.42;
+        feedback = ctx.createGain();
+        feedback.gain.value = 0.34;
+        tone = ctx.createBiquadFilter();
+        tone.type = 'lowpass';
+        tone.frequency.value = 1600;
+        wet = ctx.createGain();
+        wet.gain.value = 0.5;
+        wet.connect(delay); delay.connect(tone); tone.connect(feedback);
+        feedback.connect(delay); tone.connect(master);
+        if (ctx.state === 'suspended') ctx.resume();
+        drone();
+        nextAt = ctx.currentTime + 0.25;
+        master.gain.exponentialRampToValueAtTime(0.85, ctx.currentTime + 3.5);
+        schedule();
+        timer = setInterval(schedule, 120);
+        return true;
+      },
+      toggle: function(){
+        if (!ctx) return false;
+        var muted = master.gain.value < 0.05;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.setValueAtTime(Math.max(master.gain.value, 0.0001), ctx.currentTime);
+        master.gain.exponentialRampToValueAtTime(muted ? 0.85 : 0.0001, ctx.currentTime + 0.5);
+        return !muted;
+      }
+    };
+  })();
+
+  var soundBtn = document.getElementById('sound');
+  soundBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var nowMuted = music.toggle();
+    soundBtn.classList.toggle('muted', nowMuted);
+  });
+
+  function openGate(){
+    if (opened) return;
+    opened = true;
+    music.start();
+    gate.classList.add('open');
+    document.body.classList.remove('locked');
+    setTimeout(function(){
+      gate.style.display = 'none';
+      soundBtn.classList.add('show');
+    }, 2200);
+  }
+  gate.addEventListener('click', openGate);
+  gate.addEventListener('touchstart', openGate, { passive: true });
+  gate.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openGate(); }
+  });
+})();
+</script>
+
+</body>
+</html>
