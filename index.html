@@ -358,7 +358,7 @@
   </div>
 </div>
 
-<audio id="bgm" src="Theme.mp3" loop preload="auto"></audio>
+<audio id="bgm" src="Theme.mp3" loop preload="auto" playsinline webkit-playsinline></audio>
 
 <button class="sound" id="sound" aria-label="Toggle music">
   <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
@@ -636,8 +636,36 @@
   var bgm = document.getElementById('bgm');
 
   var soundBtn = document.getElementById('sound');
+  /* No volume ramp here: iOS ignores volume changes, and phones throttle
+     timers, which can leave the track stuck near silent. */
+  function startMusic(){
+    try { bgm.load(); } catch (err) {}
+    var playing = bgm.play();
+    if (playing && playing.catch) {
+      playing.catch(function(){ soundBtn.classList.add('muted'); });
+    }
+  }
+
+  /* Phones often refuse the first play call. Retry on the next tap
+     anywhere on the page until it actually starts. */
+  function retryMusic(){
+    if (bgm.paused && !bgm.muted) startMusic();
+    if (!bgm.paused) {
+      document.removeEventListener('touchend', retryMusic);
+      document.removeEventListener('click', retryMusic);
+    }
+  }
+  document.addEventListener('touchend', retryMusic);
+  document.addEventListener('click', retryMusic);
+
   soundBtn.addEventListener('click', function(e){
     e.stopPropagation();
+    if (bgm.paused) {
+      bgm.muted = false;
+      startMusic();
+      soundBtn.classList.remove('muted');
+      return;
+    }
     bgm.muted = !bgm.muted;
     soundBtn.classList.toggle('muted', bgm.muted);
   });
@@ -645,15 +673,7 @@
   function openGate(){
     if (opened) return;
     opened = true;
-    bgm.volume = 0;
-    var playing = bgm.play();
-    if (playing && playing.catch) playing.catch(function(){});
-    var vol = 0;
-    var fade = setInterval(function(){
-      vol += 0.035;
-      if (vol >= 0.85) { vol = 0.85; clearInterval(fade); }
-      try { bgm.volume = vol; } catch (err) { clearInterval(fade); }
-    }, 90);
+    startMusic();
     gate.classList.add('open');
     document.body.classList.remove('locked');
     setTimeout(function(){
